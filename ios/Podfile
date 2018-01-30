@@ -10,11 +10,6 @@ target 'RNTreasureDataExample' do
   pod 'React', path: '../node_modules/react-native'
   pod 'RNTreasureData', :path => '../node_modules/react-native-td'
 
-  target 'RNTreasureDataExample-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
   target 'RNTreasureDataExampleTests' do
     inherit! :search_paths
     # Pods for testing
