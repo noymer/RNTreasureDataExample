@@ -1,0 +1,35 @@
+PODS:
+  - KeenClientTD (3.2.32)
+  - React (0.52.2):
+    - React/Core (= 0.52.2)
+  - React/Core (0.52.2):
+    - yoga (= 0.52.2.React)
+  - RNTreasureData (0.9.1):
+    - TreasureData-iOS-SDK
+  - TreasureData-iOS-SDK (0.1.24):
+    - KeenClientTD (= 3.2.32)
+  - yoga (0.52.2.React)
+
+DEPENDENCIES:
+  - React (from `../node_modules/react-native`)
+  - RNTreasureData (from `../node_modules/react-native-td`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga/Yoga.podspec`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ../node_modules/react-native
+  RNTreasureData:
+    :path: ../node_modules/react-native-td
+  yoga:
+    :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+
+SPEC CHECKSUMS:
+  KeenClientTD: 66da83b01742f4983925391e70b5beecb4096bd1
+  React: 43e97926f429d846050880666de1809e22dd5cc5
+  RNTreasureData: c40d07b95e5f734c91ca1e6beb2576e5a9f2602d
+  TreasureData-iOS-SDK: e8b6d8cde3807c4ad600eb132227fb4eb20762bd
+  yoga: 55da126afc384965b96bff46652464373b330add
+
+PODFILE CHECKSUM: 73f59fc85f98f8332b34fd296d4529388e0cfb5f
+
+COCOAPODS: 1.4.0
