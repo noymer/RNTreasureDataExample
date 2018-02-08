@@ -7,7 +7,9 @@ target 'RNTreasureDataExample' do
 
   # Pods for RNTreasureDataExample
   pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga/Yoga.podspec'
-  pod 'React', path: '../node_modules/react-native'
+  pod 'React', path: '../node_modules/react-native', subspecs: [
+    'DevSupport'
+    ]
   pod 'RNTreasureData', :path => '../node_modules/react-native-td'
 
   target 'RNTreasureDataExampleTests' do

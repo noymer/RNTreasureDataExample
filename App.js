@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import TreasureData from 'react-native-td'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -18,6 +19,38 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+
+const Config = {
+  'TD_API_KEY': 'hogehogehoge',
+  'TD_DATABASE': 'test_react_native_td',
+}
+TreasureData.initializeApiEndpoint('https://idcf.in.treasuredata.com')
+TreasureData.initialize(Config.TD_API_KEY)
+TreasureData.setDefaultDatabase(Config.TD_DATABASE)
+TreasureData.enableLogging()
+TreasureData.enableAutoAppendUniqId()
+TreasureData.enableAutoAppendModelInformation()
+
+const log = {
+  value: 150,
+  time: new Date().getTime() / 1000,
+  id: '12345',
+}
+if (Platform.OS === 'ios') {
+  TreasureData.addEvent(
+    log,
+    null,
+    'log'
+  )
+} else {
+  TreasureData.addEvent(
+    log,
+    'log'
+  )
+}
+console.log('@@ INSERT ' + JSON.stringify(log))
+
+TreasureData.uploadEvents()
 
 export default class App extends Component<{}> {
   render() {
